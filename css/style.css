@@ -1,0 +1,92 @@
+ul {
+    list-style: none;
+}
+li {
+    display: inline;
+}
+
+.container {
+    width: 1024px;
+}
+
+.header-social {
+    text-align: center;
+}
+.header-menu {
+    display: flex;
+}
+.header-menu li {
+    flex: auto;
+}
+
+
+
+
+
+.services .dropdown-menu {
+    display: none;
+}
+.services .col-md-2:hover .dropdown-menu {
+    display: block;
+}
+
+
+.social-btn {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+}
+
+.social-btn-instagram {
+    background: url("../img/social.png") no-repeat;
+}
+.social-btn-vk {
+    background: url("../img/social.png") no-repeat;
+}
+.social-btn-odnokl {
+    background: url("../img/social.png") no-repeat;
+}
+
+
+
+.services .col-md-2 {
+    height: 158px;
+}
+.hair {
+    background: url("../img/services.png") no-repeat 8px 0;
+
+}
+.decorative {
+    background: url("../img/services.png") no-repeat -158px 0;
+}
+.body {
+    background: url("../img/services.png") no-repeat -325px 0;
+}
+.spa {
+    background: url("../img/services.png") no-repeat -492px 0;
+}
+.hands-feet {
+    background: url("../img/services.png") no-repeat -660px 0;
+}
+.solar {
+    background: url("../img/services.png") no-repeat -827px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
