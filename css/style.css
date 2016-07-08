@@ -1,92 +1,338 @@
 ul {
     list-style: none;
+    padding: 0;
 }
 li {
     display: inline;
 }
+p,h1,h2, h3, h4 {
+    margin: 0;
+    font-weight: lighter;
+}
+p {
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 60px;
+}
+h2 {
+    color: #dc060e;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+h4 {
+    font-size: 18px;
+}
 
+a {
+    text-decoration: none;
+}
+body {
+    /*background: url("../img/background.jpg") no-repeat -580px top;*/
+    background-color: #ebecec ;
+    opacity: 0.8;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    margin: 0;
+}
+.header-wrapper {
+    height: 172px;
+    background: black
+                url("../img/pattern-gray.png") repeat-x;
+}
+
+.background-photo-wrapper {
+    position: relative;
+    height: 680px;
+    z-index: -2;
+    background: url("../img/background-photo.jpg") left bottom repeat-x;
+}
+.background-photo-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 630px;
+    width: 100%;
+    height: 1830px;
+    background: url("../img/pattern-white1.png");
+    z-index: -1;
+}
 .container {
     width: 1024px;
+    margin: auto;
 }
-
+header {
+    padding-top: 15px;
+}
 .header-social {
     text-align: center;
+    margin-bottom: 10px;
 }
-.header-menu {
-    display: flex;
-}
-.header-menu li {
-    flex: auto;
-}
-
-
-
-
-
-.services .dropdown-menu {
-    display: none;
-}
-.services .col-md-2:hover .dropdown-menu {
-    display: block;
-}
-
-
 .social-btn {
     display: inline-block;
-    width: 26px;
-    height: 26px;
-}
-
-.social-btn-instagram {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
     background: url("../img/social.png") no-repeat;
 }
-.social-btn-vk {
-    background: url("../img/social.png") no-repeat;
+.instagram {
+    background-position: left;
 }
-.social-btn-odnokl {
-    background: url("../img/social.png") no-repeat;
+.vk {
+    background-position: -52px 0;
+}
+.odnokl {
+    background-position: -102px 0;
+}
+.header-info {
+    display: flex;
+    font-size: 16px;
+    color: white;
+    justify-content: space-between;
+}
+.address {
+    font-size: 16px;
+}
+.font-20 {
+    font-size: 20px;
+}
+.logo p {
+    font-size: 22px;
+}
+.number {
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    font-size: 25px;
+}
+.number span {
+    opacity: 0.5;
+}
+.header-contacts a {
+    color: white;
+}
+.header-menu {
+    background: #ffffff;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.menu-item {
+    position: relative;
+    color: black;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.menu-item>a {
+    padding-bottom: 10px;
+    line-height: 68px;
+}
+.dropdown {
+    position: absolute;
+    /*display: none;*/
+    display: flex;
+    flex-direction: column;
+}
+.menu-item:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+.dropdown a {
+    border-bottom: solid 1px gray;
+}
+.dropdown a:last-child {
+    border: none;
+}
+.slider-video-wrapper {
+    display: flex;
+    height: 350px;
+}
+.slider {
+    width: 640px;
+    height: 350px;
+    background: url("../img/slider1.jpg") no-repeat center;
+}
+.video {
+    width: 385px;
+    height: 350px;
+    background: gray
+                url("../img/video.jpg") no-repeat center;
 }
 
 
 
-.services .col-md-2 {
+.services {
+    background: #ffffff
+                url("../img/leafs.png") no-repeat center top;
+    display: flex;
+    justify-content: space-around;
+    height: 200px;
+    padding: 65px 10px 0 10px;
+
+}
+.services-item {
+    width: 158px;
     height: 158px;
+    background: url("../img/services.png") no-repeat;
+
 }
 .hair {
-    background: url("../img/services.png") no-repeat 8px 0;
-
+    background-position: left;
 }
 .decorative {
-    background: url("../img/services.png") no-repeat -158px 0;
+    background-position: -165px 0;
 }
 .body {
-    background: url("../img/services.png") no-repeat -325px 0;
+    background-position: -330px 0;
 }
 .spa {
-    background: url("../img/services.png") no-repeat -492px 0;
+    background-position: -500px 0;
+
 }
 .hands-feet {
-    background: url("../img/services.png") no-repeat -660px 0;
+    background-position: -665px 0;
+
 }
 .solar {
-    background: url("../img/services.png") no-repeat -827px 0;
+    background-position: -835px 0;
+
 }
+.services-dropdown {
+    display: none;
+}
+.services-item:hover .services-dropdown {
+    display: flex;
+    justify-content: space-between;
 
+}
+.stripe {
+    height: 20px;
+    background: url("../img/sand.png");
+}
+.in-insta {
+    background: black;
+    color: white;
+    height: 355px;
+    padding: 10px;
+}
+.in-insta>h3 {
+    text-align: center;
+}
+.in-insta p {
+    font-size: 18px;
+}
+.insta-photos {
+    display: flex;
+    justify-content: center;
+}
+.insta-items {
+    height: 80px;
+    display: flex;
+    align-items: center;
 
+}
+.insta-item {
+    text-align: left;
+    margin: 0 20px;
+}
+.button {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    width: 115px;
+    height: 45px;
+    border:solid 1px gray;
+    background: red;
+    margin-right: 50px;
+}
+.vantages {
+    height: 150px;
+    background: #f5f5f5
+                url("../img/borders.png") no-repeat right bottom;
+    display: flex;
+}
+.vantage-item {
+    
+}
+.comments {
+    background: #ffffff;
+    padding: 35px 20px;
+    height: 305px;
+}
+.comment {
+    padding-top: 20px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+.comments-wrapper {
+    display: flex;
+}
+.comment-flex {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+.comment-flex p {
+    flex: auto;
+    margin: 0 20px;
+}
+.comment-photo {
+    flex-basis: 85px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 85px;
+    border-radius: 50%;
+    background-color: gray;
+}
+.courses {
+    position: relative;
+    padding-top: 35px;
+    background: black;
+    height: 325px;
+}
+.courses-flex::before {
+    width: 105%;
+    height: 430px;
+    content: "";
+    position: absolute;
+    top: -34px;
+    left: 2px;
+    background: url("../img/red-pattern.png") no-repeat;
+}
+.courses-flex {
+    display: flex;
+    justify-content: center;
+}
+.course {
+    width: 250px;
+    height: 250px;
+    z-index: 0;
+}
+.increase-eyelashes {
+    background: url("../img/course1.jpg");
+}
+.eyebrow {
+    background: url("../img/course2.jpg");
+}
+.tress {
+    background: url("../img/course3.jpg");
+}
+.lamin-eyelashes {
+    background: url("../img/course4.jpg");
+}
+.about {
+    background: #ffffff;
+    padding-top: 35px;
+    height: 360px;
+}
+.salon-photos {
+    background: #ffffff;
+}
+.salon-flex {
+    display: flex;
+    justify-content: space-around;
+}
