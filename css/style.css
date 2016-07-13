@@ -30,31 +30,33 @@ h4 {
 }
 
 a {
+    color: black;
     text-decoration: none;
 }
+a:hover {
+    color: red;
+}
 body {
-    /*background: url("../img/background.jpg") no-repeat -580px top;*/
     font-family: Arial, sans-serif;
     font-weight: normal;
     margin: 0;
     position: relative;
-    height: 680px;
     background: #ebecec url("../img/background-photo.jpg") left 170px repeat-x;
 }
 body::after {
     content: "";
     position: absolute;
-    top: 830px;
+    top: 828px;
     width: 100%;
-    height: 1830px;
+    bottom: 172px;
     background: url("../img/pattern-white1.png");
     z-index: -1;
+    border-bottom: solid 2px #dc060e;
 }
 
 .header-wrapper {
     height: 172px;
-    background: black
-                url("../img/pattern-gray.png") repeat-x;
+    background: black url("../img/pattern-gray.png") repeat-x;
 }
 
 .container {
@@ -96,25 +98,34 @@ header {
 .font-20 {
     font-size: 20px;
 }
-.logo p {
-    font-size: 22px;
-}
 .number {
     font-family: Arial, sans-serif;
     font-style: italic;
     font-size: 25px;
+    background: url("../img/phone.png") no-repeat 30px;
 }
-.number span {
+.footer-contacts .number {
+    background-position: left;
+    padding-left: 55px;
+}
+.header-contacts span {
     opacity: 0.5;
+}
+.header-contacts {
+    color: white;
+    text-align: right;
+}
+.header-contacts p {
+    margin: 10px;
 }
 .header-contacts a {
     color: white;
+    padding-right: 10px;
 }
 .header-menu {
     background: #ffffff;
     display: flex;
 }
-
 .menu-item {
     position: relative;
     flex-grow: 1;
@@ -162,21 +173,18 @@ header {
     background: #ffffff;
     position: absolute;
     display: none;
-
 }
 
 .menu-item:hover .dropdown {
     display: flex;
     flex-direction: column;
+    z-index: 1;
 }
 .dropdown a {
-    color: black;
     border-bottom: solid 1px gray;
     padding: 10px;
 }
-.dropdown a:hover {
-    color: red;
-}
+
 .dropdown a:last-child {
     border: none;
 }
@@ -184,21 +192,61 @@ header {
     display: flex;
     height: 350px;
 }
+
 .slider {
+    position: relative;
     width: 640px;
     height: 350px;
-    background: url("../img/slider1.jpg") no-repeat center;
+}
+.slide {
+    display: none;
+}
+.slide.active {
+    display: block;
+}
+.slider-btn {
+    border: none;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    background: url("../img/slider-btn.png") no-repeat;
 }
 
+.left-btn {
+    background-position: left;
+    right: 50px;
+}
+.left-btn:hover {
+    background-position: right;
+    -moz-transform: rotate(180deg); /* Для Firefox */
+    -ms-transform: rotate(180deg); /* Для IE */
+    -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(180deg); /* Для Opera */
+    transform: rotate(180deg);
+}
+.right-btn {
+    background-position: left;
+    -moz-transform: rotate(180deg); /* Для Firefox */
+    -ms-transform: rotate(180deg); /* Для IE */
+    -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(180deg); /* Для Opera */
+    transform: rotate(180deg);
+}
+.right-btn:hover {
+    background-position: right;
+    transform: none;
+}
 .video {
     width: 385px;
-    height: 350px;
-    background: gray
-                url("../img/video.jpg") no-repeat center;
+    padding-top: 65px;
+    background: url("../img/sand.png");
+    text-align: center;
 }
-
-
-
+.video p {
+    margin: 10px;
+}
 .services {
     background: #ffffff
                 url("../img/leafs.png") no-repeat center top;
@@ -206,17 +254,17 @@ header {
     justify-content: space-around;
     height: 200px;
     padding: 65px 10px 0 10px;
-
 }
 .services-item {
     position: relative;
-    width: 158px;
-    height: 158px;
+    width: 153px;
+    height: 153px;
     background: url("../img/services.png") no-repeat;
-
+    border-radius: 50%;
 }
+
 .hair {
-    background-position: left;
+    background-position: left top;
 }
 .decorative {
     background-position: -165px 0;
@@ -226,32 +274,44 @@ header {
 }
 .spa {
     background-position: -500px 0;
-
 }
 .hands-feet {
     background-position: -665px 0;
-
 }
 .solar {
     background-position: -835px 0;
-
 }
 .services-dropdown {
     display: none;
-}
 
+}
+.services-item:hover {
+    height: 200px;
+    background-color: #131313;
+    border-radius: 76px 76px 0 0;
+}
+.services-dropdown a:hover {
+    color: gray;
+}
 .services-item:hover .services-dropdown {
     position: absolute;
     top: 150px;
-    width: 158px;
-    color: white;
+    width: 153px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 100;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     text-align: center;
     background: #131313 url("../img/serv-back.png");
-
+    z-index: 1;
 }
+.services-dropdown a {
+    color: white;
+    padding: 5px 0;
+}
+
 .stripe {
     height: 20px;
     background: url("../img/sand.png");
@@ -283,15 +343,21 @@ header {
     text-align: left;
     margin: 0 20px;
 }
+.insta-item .button {
+    margin-right: 50px;
+}
 .button {
     font-size: 16px;
     color: white;
     text-align: center;
     width: 115px;
-    height: 45px;
+    height: auto;
+    line-height: 45px;
     border:solid 1px gray;
-    background: red;
-    margin-right: 50px;
+    background: #b41a20;
+}
+.button:hover {
+    color: black;
 }
 .vantages {
     padding: 0 50px;
@@ -311,7 +377,7 @@ header {
     position: relative;
     background: #ffffff;
     padding: 35px 25px;
-    height: 305px;
+    height: 280px;
 }
 .comments:after {
     position: absolute;
@@ -324,7 +390,6 @@ header {
 }
 .comment {
     padding-top: 20px;
-
 }
 .comment:first-child {
     margin-right: 40px;
@@ -347,10 +412,15 @@ header {
     flex-shrink: 0;
     height: 85px;
     border-radius: 50%;
-    background-color: gray;
+    background-color: #edece9;
+}
+.comment-user {
+    display: inline-block;
+    padding: 10px;
+    background-color: #edece9;
 }
 .all-comments {
-
+    float: right;
 }
 .courses {
     position: relative;
@@ -359,31 +429,76 @@ header {
     height: 325px;
     color: white;
 }
+
 .courses h2 {
+    padding-left: 20px;
     color: white;
+}
+.schedule {
+    color: white;
+    position: absolute;
+    right: 40px;
+    padding-right: 30px;
+    top: 0;
+    background: url("../img/doc.png") no-repeat;
+    background-position: right;
+}
+.schedule:hover {
+    color: #dc060e;
+    text-decoration: underline;
 }
 .main-container{
     position: relative;
 }
-.main-container::after {
+.courses::after {
     width: 105%;
     height: 430px;
     content: "";
     position: absolute;
-    bottom: 453px;
+    top: -34px;
     left: 2px;
     background: url("../img/red-pattern.png") no-repeat;
 }
 .courses-wrapper {
+    position: relative;
     z-index: 1;
 }
 .courses-flex {
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding-top: 20px;
 }
 .course {
+    color: #dc060e;
     width: 250px;
     height: 250px;
+}
+.course p {
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 20px 0;
+    background: rgba(195, 188, 186, 0.75);
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 0;
+}
+.course-dropdown {
+    display: none;
+}
+.course-dropdown a {
+    color: #dc060e;
+}
+.course:hover .course-dropdown {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    padding: 5px;
+    line-height: 30px;
+    background: rgba(195, 188, 186, 0.75);
+}
+.course:hover p {
+    margin-top: 20px;
 }
 .increase-eyelashes {
     background: url("../img/course1.jpg");
@@ -404,12 +519,266 @@ header {
 }
 .salon-photos {
     background: #ffffff;
+    padding: 15px 25px;
 }
 .salon-flex {
+    margin-top: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+.salon-flex img {
+    box-shadow: 5px 10px 15px rgba(0,0,0,0.6);
+}
+.footer-container {
+    background: url("../img/footer-pattern.png") no-repeat;
+    background-position: 20px -20px;
+}
+.footer-menu {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.footer-menu a {
+    padding-right: 20px;
+}
+.footer-menu a:hover {
+    color: #dc060e;
 }
 .footer-flex {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
 }
+.footer-flex-item {
+    flex: 1;
+    font-size: 14px;
+    color: black;
+}
+.consumer {
+    text-decoration: underline;
+}
+.footer-address {
+    font-size: 18px;
+}
+.footer-contacts p {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.footer-contacts a {
+    text-decoration: underline;
+    float: right;
+}
+.footer-social {
+    text-align: center;
+}
+
+.copyright {
+    width: 120px;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    background: url("../img/copyright-black.png") no-repeat left;
+}
+.copyright:hover {
+    background: url("../img/copyright.png") no-repeat left;
+}
+
+
+/* Всплывающая форма */
+
+.phone-number,
+. appointment {
+    display: none;
+}
+.error {
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+.form-send {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.modal-content {
+    display: none;
+
+    position: absolute;
+    top: 240px;
+    left: 50%;
+
+    width: 300px;
+    margin-left: -230px;
+    padding: 50px 80px;
+
+    color: #000000;
+    background: white;
+    border: solid 1px gray;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.modal-content-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 22px;
+    height: 22px;
+
+    font-size: 0;
+
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 2px;
+
+    width: 19px;
+    height: 3px;
+    background-color: #d0d0d0;
+    border-radius: 1px;
+}
+
+.modal-content-close::before {
+    transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+    transform: rotate(-45deg);
+}
+
+.modal-content h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.modal-content p {
+    margin: 0;
+    margin-bottom: 14px;
+}
+
+.tel-form, .appointment-form {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="tel"],
+textarea {
+    width: 241px;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    padding-right: 40px;
+    text-align: center;
+
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+
+    border: 1px solid gray;
+    outline: none;
+}
+
+.tel-form input:focus {
+    border-color: #663d15;
+}
+
+
+
+
+.index-page {
+    display: block;
+}
+
+/*СТИЛИ СТРАНИЦЫ ОТЗЫВЫ*/
+.discount-page {
+    background-color: white;
+}
+.discount-page h2 {
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+.discount-page a:hover {
+    color: #dc060e;
+}
+.discount-page .comment {
+    padding-top: 0;
+}
+.breadcrumbs ul {
+    margin: 0;
+    padding: 15px;
+    background-color: #edece9;
+}
+
+.comments-2-flex {
+    display: flex;
+    border-bottom: solid 1px gray;
+    padding: 20px 25px;
+}
+.all-comments-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.discount-page {
+    display: none;
+}
+
+
+/*СТИЛИ СТРАНИЦЫ СПИСОК УСЛУГ*/
+.services-page {
+    display: none;
+}
+
+.about-services {
+    display: none;
+
+    background-color: white;
+    padding: 25px;
+}
+.about-service a {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
