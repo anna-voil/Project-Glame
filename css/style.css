@@ -12,10 +12,7 @@ p,h1,h2, h3, h4 {
 p {
     margin: 20px 0;
 }
-h1 {
-    font-size: 60px;
-}
-h2 {
+h1, h2 {
     color: #dc060e;
     font-size: 24px;
     text-transform: uppercase;
@@ -204,14 +201,17 @@ header {
 .slide.active {
     display: block;
 }
+.arrow-btn,
 .slider-btn {
     border: none;
-    position: absolute;
     bottom: 30px;
     right: 20px;
     width: 25px;
     height: 25px;
-    background: url("../img/slider-btn.png") no-repeat;
+    background: url("../img/slider/slider-btn.png") no-repeat;
+}
+.slider-btn {
+    position: absolute;
 }
 
 .left-btn {
@@ -704,7 +704,7 @@ textarea {
 
 
 .index-page {
-    display: block;
+    display: none;
 }
 
 /*СТИЛИ СТРАНИЦЫ ОТЗЫВЫ*/
@@ -759,23 +759,108 @@ textarea {
     text-decoration: underline;
 }
 
+/*СТИЛИ СТРАНИЦЫ УСЛУГ (КРУГИ)*/
+.services-circles-page {
+    display: none;
+    background: white url("../img/leafs.png") top repeat-x;
+}
+.circles-container {
+    position: relative;
+    height: 530px;
+    padding: 70px 25px;
+}
+.circle-2-flex h3 {
+    left: 210px;
+    position: absolute;
+    background: gray;
+}
+.circle-2-flex {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+.circles-left {
+    top: 65px;
+    left: 40px;
+}
+.circles-center {
+    top: 165px;
+    left: 33%;
+}
+.circles-right {
+    top: 65px;
+    right: 200px;
+}
+.circle {
+    display: inline-block;
+    width: 175px;
+    height: 175px;
+    border: solid 6px #d0d0d0;
+    border-radius: 50%;
+    box-shadow: 25px 35px 45px -35px gray;
+}
+.circle-hair {
+    margin-bottom: 70px;
+  background: url("../img/circles/hair.png") center;
+}
+.circle-body {
+    background: url("../img/circles/body.png") center;
+}
+.circle-decorative {
+    margin-bottom: 70px;
+    background: url("../img/circles/eyes.png") center;
+}
+.circle-hands-feet {
+    background: url("../img/circles/hands.png") center;
+}
+.circle-spa {
+    margin-bottom: 70px;
+    background: url("../img/circles/spa.png") center;
+}
+.circle-solar {
+    background: url("../img/circles/solar.png") center;
+}
 
+/*СТИЛИ СТРАНИЦЫ ТОВАРА*/
+.product-page,
+.service-page {
+    display: none;
 
+    background: white;
+}
+.product-page-content {
+    box-sizing: border-box;
+    padding: 25px;
+}
+.product-flex {
+    justify-content: space-between;
+    display: flex;
+    margin: 20px 0;
+}
+.circle-product {
+    flex-shrink: 0;
+    background: url("../img/circles/hair.png") center;
+}
+.about-product {
+    width: 450px;
+}
+.services-price {
+    width: 300px;
+}
+.services-price span {
+    float: right;
+    margin-left: 20px;
+}
 
+.slides-product {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*СТИЛИ СТРАНИЦЫ УСЛУГИ*/
 
 
 
