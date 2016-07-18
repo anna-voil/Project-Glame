@@ -57,6 +57,7 @@ body::after {
 }
 
 .container {
+    box-sizing: border-box;
     width: 1024px;
     margin: auto;
 }
@@ -704,22 +705,22 @@ textarea {
 
 
 .index-page {
-    display: none;
 }
 
 /*СТИЛИ СТРАНИЦЫ ОТЗЫВЫ*/
-.discount-page {
+
+.comments-page {
     background-color: white;
 }
-.discount-page h2 {
+.comments-page h2 {
     margin-top: 30px;
     margin-left: 25px;
 }
 
-.discount-page a:hover {
+.comments-page a:hover {
     color: #dc060e;
 }
-.discount-page .comment {
+.comments-page .comment {
     padding-top: 0;
 }
 .breadcrumbs ul {
@@ -738,20 +739,14 @@ textarea {
     flex-direction: column;
 }
 
-
-.discount-page {
-    display: none;
-}
-
-
 /*СТИЛИ СТРАНИЦЫ СПИСОК УСЛУГ*/
+
 .services-page {
-    display: none;
+
 }
 
 .about-services {
-    display: none;
-
+    box-sizing: border-box;
     background-color: white;
     padding: 25px;
 }
@@ -761,7 +756,6 @@ textarea {
 
 /*СТИЛИ СТРАНИЦЫ УСЛУГ (КРУГИ)*/
 .services-circles-page {
-    display: none;
     background: white url("../img/leafs.png") top repeat-x;
 }
 .circles-container {
@@ -824,8 +818,6 @@ textarea {
 /*СТИЛИ СТРАНИЦЫ ТОВАРА*/
 .product-page,
 .service-page {
-    display: none;
-
     background: white;
 }
 .product-page-content {
@@ -860,10 +852,46 @@ textarea {
     margin-bottom: 30px;
 }
 
-/*СТИЛИ СТРАНИЦЫ УСЛУГИ*/
+/*СТИЛИ SERVICES-LIST*/
+.services-list {
+    background: white;
+}
+.services-list .container {
+    padding: 25px;
+}
+.list-elements li {
+    color: red;
+    margin-left: 40px;
+    list-style-type: disc;
+}
+.list-elements span {
+    color: black;
+}
+.ol-list li,
+.list-elements li {
+    display: list-item;
+}
+table {
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+table td {
+    padding: 20px;
+    border: solid 1px gray;
+}
+th {
+    font-weight: 100;
+    color: #dc060e;
+    border: solid 1px gray;
+    padding: 20px;
+    background: #d0d0d0;
+}
 
 
-
-
-
+/*СТИЛИ media-discount-list*/
+.media-discount-list {
+    background: white;
+}
 
