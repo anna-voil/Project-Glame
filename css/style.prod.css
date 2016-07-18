@@ -813,9 +813,6 @@ textarea {
     border-color: #663d15;
 }
 
-
-
-
 .index-page {
 }
 
@@ -878,17 +875,28 @@ textarea {
 
 /*СТИЛИ СТРАНИЦЫ УСЛУГ (КРУГИ)*/
 .services-circles-page {
-    background: white url("../img/leafs.png") top repeat-x;
+    background-color: white;
+
 }
 .circles-container {
     position: relative;
     height: 530px;
     padding: 70px 25px;
+    background-image: url("../img/leafs-top.png"),
+    url("../img/leafs-bottom.png");
+    background-repeat: no-repeat;
+    background-position: center top,
+    center bottom;
 }
 .circle-2-flex h3 {
-    left: 210px;
+    left: 190px;
+    top: 50px;
     position: absolute;
-    background: gray;
+    white-space: nowrap;
+}
+.circle-decorative h3,
+.circle-hands-feet h3 {
+    top: 110px;
 }
 .circle-2-flex {
     position: absolute;
@@ -915,6 +923,7 @@ textarea {
     right: 200px;
 }
 .circle {
+    position: relative;
     display: inline-block;
     width: 175px;
     height: 175px;
