@@ -705,6 +705,7 @@ textarea {
 
 
 .index-page {
+    display: none;
 }
 
 /*СТИЛИ СТРАНИЦЫ ОТЗЫВЫ*/
@@ -894,4 +895,94 @@ th {
 .media-discount-list {
     background: white;
 }
+.media-discount-list h4 {
+    margin: 10px 0;
+}
+.media-discount-list .container {
+    padding: 25px;
+    box-sizing: border-box;
+}
+.discount-container {
+    padding-bottom: 25px;
+    border-bottom: solid 1px gray;
+}
+.flex-media-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.discount {
+    display: flex;
+}
+.discount-photo-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #d0d0d0;
+    flex-shrink: 0;
+    margin: 10px;
+}
+.media-btn {
+    width: 110px;
+    height: 30px;
+    background: #d0d0d0;
+    color: black;
+    border: none;
+    display: block;
+    margin-left: auto;
+}
+.media-btn:hover {
+    background: red;
+    color: white;
+}
+.pager {
+    text-align: center;
+}
+.pager li {
+    display: inline-block;
+    width: 25px;
+    height: 20px;
+    padding-top: 5px;
+    text-align: center;
+}
+.pager .page-active {
+    flex-shrink: 0;
+    border: solid 1px red;
+    border-radius: 50%;
+    color: red;
+}
+/*СТИЛИ СТРАНИЦЫ МЕДИА-КАРТОЧКА*/
+.media-card-list {
+    background: white;
+}
+.media-card-list .container{
+    padding: 25px;
+}
 
+.slider-media {
+    margin: 20px 20px 10px 0;
+    float: left;
+    width: 250px;
+    overflow: hidden;
+}
+.slide-media-big {
+    white-space: nowrap;
+    font-size: 0;
+    height: 200px;
+    position: relative;
+}
+.slide-media-min {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+/*СТИЛИ СТРАНИЦЫ ФОТО-КАРТОЧКА*/
+.photo-card-list {
+    background: white;
+}
+.photo-card-list .container{
+    padding: 25px;
+}
+.photo-card {
+    margin: 20px 0;
+}
