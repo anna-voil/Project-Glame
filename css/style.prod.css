@@ -1,3 +1,19 @@
+
+@font-face {
+    font-family: 'iskoola pota';
+    url(../fonts/ISKPOTA.TTF) format('ttf');
+}
+@font-face {
+    font-family: 'iskoola pota';
+    url(../fonts/ISKPOTAB.TTF) format('ttf');
+}
+@font-face {
+    url(../fonts/SYLFAEN.TTF) format('ttf');
+}
+
+
+
+
 ul {
     list-style: none;
     padding: 0;
@@ -115,8 +131,11 @@ header {
     font-size: 20px;
 }
 .number {
-    font-family: Arial, sans-serif;
+    font-family: 'iskoola pota';
     font-style: italic;
+    font-weight: normal;
+    src: local('iskoola pota'),
+    url(../fonts/ISKPOTA.TTF) format('ttf');
     font-size: 25px;
     background: url("../img/phone.png") no-repeat 30px;
 }
@@ -244,7 +263,9 @@ header {
     display: block;
 }
 .arrow-btn,
-.slider-btn {
+.slider-btn,
+.owl-next,
+.owl-prev {
     border: none;
     bottom: 30px;
     right: 20px;
@@ -252,31 +273,42 @@ header {
     height: 25px;
     background: url("../img/slider/slider-btn.png") no-repeat;
 }
-.slider-btn {
+.slider-btn,
+.owl-next,
+.owl-prev {
     position: absolute;
 }
 
-.left-btn {
+.left-btn,
+.owl-prev {
     background-position: left;
     right: 50px;
 }
-.left-btn:hover {
+.left-btn:hover,
+.owl-prev:hover {
     background-position: right; /* Для Firefox */
     -ms-transform: rotate(180deg); /* Для IE */
     -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */ /* Для Opera */
     transform: rotate(180deg);
 }
-.right-btn {
+.right-btn,
+.owl-next {
     background-position: left; /* Для Firefox */
     -ms-transform: rotate(180deg); /* Для IE */
     -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */ /* Для Opera */
     transform: rotate(180deg);
 }
-.right-btn:hover {
+.right-btn:hover,
+.owl-next:hover {
     background-position: right;
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
+}
+
+.owl-next,
+.owl-prev {
+    font-size: 0;
 }
 .video {
     width: 385px;
@@ -338,7 +370,7 @@ header {
 
 }
 .services-item:hover {
-    height: ;
+    cursor: pointer;
 }
 .services-dropdown a:hover {
     color: #2a2a2a;
@@ -861,8 +893,10 @@ textarea {
 .comments-page a:hover {
     color: #dc060e;
 }
-.comments-page .comment {
+.comments-page .comment,
+.comments-wrapper .comment {
     padding-top: 0;
+    flex: 1;
 }
 .breadcrumbs ul {
     margin: 0;
@@ -986,6 +1020,33 @@ textarea {
 }
 
 /*СТИЛИ СТРАНИЦЫ ТОВАРА*/
+#owl-demo {
+    width: 905px;
+    padding-left: 40px;
+    padding-right: 20px;
+    margin: 0;
+}
+#owl-demo .item{
+    width: 130px;
+    height: 100px;
+    background: #42bdc2;
+    margin: 5px;
+    color: #FFF;
+    text-align: center;
+}
+.owl-prev {
+    position: absolute;
+    top: 40px;
+    left: 0;
+
+}
+.owl-next {
+    position: absolute;
+    top: 40px;
+    right: 0;
+}
+
+
 .product-page,
 .service-page {
     background: white;
