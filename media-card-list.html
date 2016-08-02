@@ -3,6 +3,11 @@
 <head lang="en">
   <meta charset="UTF-8">
   <link href="css/style.prod.css" rel="stylesheet">
+
+  <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/> <!--index-slider-->
+
   <title></title>
 </head>
 <body>
@@ -25,14 +30,18 @@
     <h1>Заголовок 1 уровня карточка акции, медиа</h1>
     <div class="slider-media">
       <div class="slide-media-big">
-        <img src="img/product-big.jpg" width="250" height="200">
-        <img src="img/inst4.jpg" width="250" height="200">
-        <img src="img/course1.jpg" width="250" height="200">
+       <div><img src="img/product-big.jpg" width="250" height="200"></div>
+       <div><img src="img/inst4.jpg" width="250" height="200"></div>
+       <div><img src="img/course1.jpg" width="250" height="200"></div>
+        <div><img src="img/inst4.jpg" width="250" height="200"></div>
+        <div><img src="img/course1.jpg" width="250" height="200"></div>
       </div>
       <div class="slide-media-min">
-        <img onclick="mediaChange(0)" src="img/product.jpg" width="75" height="60">
-        <img onclick="mediaChange(1)" src="img/inst4.jpg" width="75" height="60">
-        <img onclick="mediaChange(2)" src="img/course1.jpg" width="75" height="60">
+        <div><img src="img/product.jpg" width="75" height="60"></div>
+        <div><img src="img/inst4.jpg" width="75" height="60"></div>
+        <div><img src="img/course1.jpg" width="75" height="60"></div>
+        <div><img src="img/inst4.jpg" width="75" height="60"></div>
+        <div><img src="img/course1.jpg" width="75" height="60"></div>
       </div>
     </div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odioLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
@@ -44,21 +53,33 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odioLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odioLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
 
-
-    <!--ПЕРЕКЛЮЧЕНИЕ СЛАЙДОВ-->
-
-    <script>
-      function mediaChange(mediaSlide) {
-        console.log(mediaSlide)
-        document.querySelector('.slide-media-big').style.left = -mediaSlide*250 + 'px';
-      }
-    </script>
-
     <button class="media-btn">Назад к списку</button>
 
   </div>
 </div>
 
+
+  <!--ПЕРЕКЛЮЧЕНИЕ СЛАЙДОВ-->
+
+  <script type="text/javascript" src="js/slick.min.js"></script>
+
+  <script>
+
+    $('.slide-media-big').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+      arrows: false,
+      asNavFor: '.slide-media-min'
+    });
+    $('.slide-media-min').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.slide-media-big',
+      focusOnSelect: true,
+      arrows: false,
+    });
+  </script>
 
 </body>
 </html>

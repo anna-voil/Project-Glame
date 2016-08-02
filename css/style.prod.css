@@ -1277,22 +1277,17 @@ th {
     width: 250px;
     overflow: hidden;
 }
+
 .slide-media-big {
-    white-space: nowrap;
     font-size: 0;
     height: 200px;
-    position: relative;
 }
 .slide-media-min {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     margin-top: 12px;
+    margin-right: -14px;
+}
+.slide-media-min div {
+    outline: none;
 }
 
 /*СТИЛИ СТРАНИЦЫ ФОТО-КАРТОЧКА*/
