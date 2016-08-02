@@ -251,8 +251,12 @@ header {
     height: 350px;
 }
 
-.slider {
-    position: relative;
+.index-slider-wrapper {
+    width: 640px;
+    height: 350px;
+}
+
+.index-slider {
     width: 640px;
     height: 350px;
 }
@@ -265,7 +269,8 @@ header {
 .arrow-btn,
 .slider-btn,
 .owl-next,
-.owl-prev {
+.owl-prev,
+.slick-arrow {
     border: none;
     bottom: 30px;
     right: 20px;
@@ -275,31 +280,37 @@ header {
 }
 .slider-btn,
 .owl-next,
-.owl-prev {
+.owl-prev,
+.slick-arrow {
     position: absolute;
+    z-index: 1;
 }
 
 .left-btn,
-.owl-prev {
+.owl-prev,
+.slick-prev {
     background-position: left;
     right: 50px;
 }
 .left-btn:hover,
-.owl-prev:hover {
+.owl-prev:hover,
+.slick-prev:hover {
     background-position: right; /* Для Firefox */
     -ms-transform: rotate(180deg); /* Для IE */
     -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */ /* Для Opera */
     transform: rotate(180deg);
 }
 .right-btn,
-.owl-next {
+.owl-next,
+.slick-next {
     background-position: left; /* Для Firefox */
     -ms-transform: rotate(180deg); /* Для IE */
     -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */ /* Для Opera */
     transform: rotate(180deg);
 }
 .right-btn:hover,
-.owl-next:hover {
+.owl-next:hover,
+.slick-next:hover{
     background-position: right;
     -webkit-transform: none;
     -ms-transform: none;
@@ -307,7 +318,8 @@ header {
 }
 
 .owl-next,
-.owl-prev {
+.owl-prev,
+.slick-arrow {
     font-size: 0;
 }
 .video {

@@ -11,11 +11,12 @@
   <!-- Important Owl stylesheet -->
   <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
 
-  <!-- Default Theme -->
-  <!--<link rel="stylesheet" href="owl-carousel/owl.theme.css">-->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/> <!--index-slider-->
 
 
-  <!-- Include js plugin -->
+  <script src="js/owl.carousel.js"></script>
+
+  <title></title>
 
 
 </head>
@@ -160,22 +161,20 @@
 
 
 
+<div class="index-slider-wrapper">
 
 
-
-          <div class="slider">
-            <div class="slides">
-              <img class="slide" src="img/slider/slide1.jpg" width="640" height="350">
-              <img class="slide" src="img/slider/slide2.jpg" width="640" height="350">
-              <img class="slide" src="img/slider/slide3.jpg" width="640" height="350">
-              <img class="slide" src="img/slider/slide4.jpg" width="640" height="350">
-              <img class="slide" src="img/slider/slide5.jpg" width="640" height="350">
+          <div class="index-slider">
+            <div class="index-slides">
+              <div><img src="img/slider/slide2.jpg" width="640" height="350"/></div>
+              <div><img src="img/slider/slide3.jpg" width="640" height="350"/></div>
+              <div><img src="img/slider/slide1.jpg" width="640" height="350"/></div>
+              <div><img src="img/slider/slide4.jpg" width="640" height="350"/></div>
+              <div><img src="img/slider/slide5.jpg" width="640" height="350"/></div>
             </div>
-            <button class="slider-btn left-btn"></button>
-            <button class="slider-btn right-btn"></button>
           </div>
 
-
+</div>
 
 
 
@@ -435,32 +434,16 @@
 
     <!--SLIDER SCRIPT-->
 
-    <script>
-        var currentSlide = 0
-        var slideCount = 5
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script>
+  $('.index-slides').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  });
 
-        document.querySelector('.left-btn').addEventListener('click', function(e) {
-          currentSlide = (currentSlide || slideCount) - 1
-          selectSlide(currentSlide)
-        })
-
-        document.querySelector('.right-btn').addEventListener('click', function(e) {
-          currentSlide = (currentSlide + 1) % slideCount
-          selectSlide(currentSlide)
-        })
-        selectSlide(currentSlide)
-
-        function selectSlide(slideIndex) {
-          var slides = document.querySelectorAll('.slide')
-          for(var i = 0; i < slideCount; i++) {
-            if (i == slideIndex) {
-              slides.item(i).classList.add('active')
-            } else {
-              slides.item(i).classList.remove('active')
-            }
-          }
-        }
-    </script>
+</script>
 
 </body>
 </html>
